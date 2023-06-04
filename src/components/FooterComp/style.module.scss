@@ -1,0 +1,131 @@
+@import "../../styles/palette";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.footer {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #fff;
+  fill: #fff;
+  background-color: $col-blue-1;
+  padding: 70px 0;
+
+  &__inner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 95px;
+
+    & ul {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 0;
+    }
+
+    & h3 {
+      line-height: 30px;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 25px;
+    }
+
+    & p {
+      max-width: 270px;
+    }
+
+    & a {
+      color: #fff;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    & .about {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      & .logo {
+        display: block;
+      }
+
+      & p {
+        &:first-of-type {
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+    & .categories {
+    }
+
+    & .contacts {
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+
+      & h3 {
+        margin-bottom: 0;
+      }
+
+      &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        justify-content: flex-start;
+
+        &:last-child {
+          flex-direction: row;
+        }
+      }
+
+      &__link {
+        font-size: 14px;
+        line-height: 21px;
+        font-weight: 600;
+      }
+      &__text {
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 300;
+      }
+      &__add {
+        font-size: 10px;
+        line-height: 15px;
+        font-weight: 400;
+        text-decoration-line: underline;
+      }
+    }
+
+    & .prices {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      & h3 {
+        margin-bottom: 5px;
+      }
+
+      & .soclinks {
+        display: flex;
+        gap: 10px;
+      }
+    }
+
+    & .nav {
+      & ul {
+        gap: 20px;
+        font-size: 14px;
+        line-height: 21px;
+        font-weight: 400;
+      }
+    }
+  }
+}

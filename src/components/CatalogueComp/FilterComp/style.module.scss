@@ -1,0 +1,84 @@
+@import "../../../styles/palette";
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__btns {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    & .checkboxes {
+      display: flex;
+      gap: 5px;
+      flex-direction: column;
+      border: none;
+    }
+    & .label {
+      display: flex;
+      gap: 10px;
+      cursor: pointer;
+    }
+    & .checkbox {
+      cursor: pointer;
+    }
+  }
+
+  & h5 {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: $col-black-1;
+  }
+
+  & h4 {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $col-black-1;
+  }
+  & .price {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    & h5 {
+      font-size: 14px;
+      line-height: 21px;
+      font-weight: 300;
+
+      &::after {
+        content: "₸";
+        color: $col-black-1;
+        font-weight: 500;
+        margin-left: 5px;
+      }
+    }
+    &__inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    & input {
+      padding: 4px 14px;
+      width: 105px;
+      height: 23px;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 198, 80, 0.3) 0%,
+        rgba(254, 202, 110, 0.3) 97.25%
+      );
+      border-radius: 1000px;
+      border: none;
+    }
+  }
+}

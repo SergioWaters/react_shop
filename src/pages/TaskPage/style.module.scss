@@ -1,0 +1,24 @@
+.tasks {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 50px;
+  padding: 50px 20px;
+  background-color: #fff;
+
+  & ul {
+    background-color: rgba(0, 0, 0, 0.177);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .done {
+    background-color: rgba(172, 255, 47, 0.5);
+  }
+
+  .todo {
+    background-color: rgba(255, 47, 47, 0.5);
+  }
+}

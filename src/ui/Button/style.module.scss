@@ -1,0 +1,35 @@
+@import "../../styles/palette";
+
+.button {
+  box-sizing: border-box;
+  border-radius: 79px;
+  border: 1px solid transparent;
+  padding: 20px 55px;
+  height: 60px;
+  font-size: 1em;
+  font-weight: 700;
+  font-family: inherit;
+  background-color: $col-yellow-1;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  color: #fff;
+  gap: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  &:hover {
+    border-color: $col-yellow-2;
+  }
+
+  &:active {
+    outline: 2px solid $col-yellow-2;
+  }
+
+  &.rounded {
+    padding: 0;
+    width: 60px;
+    border-radius: 50%;
+  }
+}

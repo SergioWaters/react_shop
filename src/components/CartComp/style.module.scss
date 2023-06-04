@@ -1,0 +1,43 @@
+@import "./src/styles/palette";
+
+.cart {
+  padding: 0 0 100px 0;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 50px 0;
+
+    & article {
+      border-top: $border-blue-dash;
+
+      &:last-child {
+        border-bottom: $border-blue-dash;
+      }
+    }
+  }
+
+  & h1 {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $col-black-1;
+  }
+
+  & .checkout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .total {
+      font-size: 30px;
+      line-height: 39px;
+      font-weight: 700;
+      text-align: center;
+      color: $col-black-1;
+    }
+  }
+}

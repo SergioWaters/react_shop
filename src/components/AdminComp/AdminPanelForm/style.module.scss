@@ -1,0 +1,119 @@
+@import "../../../styles/palette";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  min-width: 280px;
+  max-width: 700px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 70px -11px rgba(43, 28, 1, 0.3333333333);
+
+  .add_child_block {
+    display: flex;
+    gap: 20px;
+
+    & input {
+      flex: 1;
+    }
+
+    & button {
+      border: none;
+      border-radius: 8px;
+      background-color: $col-yellow-1;
+      min-width: 50px;
+      padding: 10px;
+    }
+  }
+  .images {
+    display: flex;
+    position: relative;
+    gap: 5px;
+
+    & button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border: none;
+      background-color: $col-yellow-1;
+      opacity: 0.5;
+      border-radius: 10px;
+    }
+
+    & p {
+      word-break: break-all;
+    }
+
+    & img {
+      object-fit: scale-down;
+      max-width: 100px;
+      border-radius: 10px;
+    }
+  }
+
+  & .part {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    min-height: 50px;
+
+    & span {
+      text-align: left;
+      font-weight: bold;
+    }
+
+    & input {
+      border: none;
+      padding: 10px;
+      border-radius: 8px;
+      background-color: $col-yellow-1;
+      opacity: 0.7;
+    }
+
+    &:nth-child(odd) {
+      background-color: #3f4e6576;
+    }
+
+    &:nth-child(even) {
+      background-color: #3f4e653e;
+    }
+  }
+
+  & .buttons {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    gap: 20px;
+
+    & button {
+      border: none;
+      border-radius: 8px;
+      background-color: $col-yellow-1;
+      min-width: 100px;
+      padding: 20px;
+    }
+  }
+
+  &.editable {
+    & .images_delete_btn,
+    & .add_child_block,
+    & .submit_btn,
+    & input {
+      display: flex;
+    }
+  }
+  &.non_editable {
+    & .images_delete_btn,
+    & .add_child_block,
+    & .submit_btn,
+    & input {
+      display: none;
+    }
+  }
+}

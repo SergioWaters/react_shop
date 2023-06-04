@@ -1,0 +1,46 @@
+@import "../../../styles/palette";
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 60px;
+
+  & .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    text-align: center;
+    padding: 5px;
+    background-color: transparent;
+    color: $col-blue-1;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+
+    &_active {
+      border-radius: 50%;
+      background-color: $col-yellow-1;
+    }
+
+    &_left,
+    &_right {
+      height: 10px;
+      width: 10px;
+      transform: rotate(45deg);
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+    &_left {
+      border-left: 1px solid $col-yellow-1;
+      border-bottom: 1px solid $col-yellow-1;
+    }
+    &_right {
+      border-right: 1px solid $col-yellow-1;
+      border-top: 1px solid $col-yellow-1;
+    }
+  }
+}

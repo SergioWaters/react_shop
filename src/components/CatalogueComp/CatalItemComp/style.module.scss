@@ -1,0 +1,83 @@
+@import "./src/styles/palette";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  box-sizing: border-box;
+  padding: 30px 25px;
+  width: 326px;
+  height: 490px;
+  background: #ffffff;
+  box-shadow: $shadow;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 300;
+
+  & .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    overflow: hidden;
+
+    & img {
+      object-fit: contain;
+    }
+  }
+  .description {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    &__item {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 5px;
+
+      &:nth-child(2) {
+        margin: 5px 0 10px 0;
+        height: 42px;
+        font-size: 16px;
+        line-height: 21px;
+        cursor: pointer;
+        align-items: start;
+        overflow: hidden;
+
+        &:hover {
+          text-decoration-line: underline;
+        }
+      }
+      &:last-child {
+        margin-top: 10px;
+      }
+
+      & .semibold {
+        font-weight: 500;
+        color: $col-black-1;
+      }
+
+      & .bold {
+        font-weight: 700;
+        color: $col-black-1;
+      }
+
+      &.tocart {
+        justify-content: space-between;
+
+        & .toCart_btn {
+          width: 150px;
+          height: 45px;
+          margin-right: 20px;
+          font-size: 10px;
+          line-height: 12px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}

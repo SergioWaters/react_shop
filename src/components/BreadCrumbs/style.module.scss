@@ -1,0 +1,40 @@
+@import "../../styles/palette";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumbs {
+  padding: 50px 0;
+
+  & .list {
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+  }
+
+  & .link {
+    position: relative;
+
+    & a {
+      color: $col-blue-1;
+    }
+
+    &:last-child {
+      opacity: 0.5;
+    }
+
+    &:not(:last-child):after {
+      content: "";
+      position: absolute;
+      display: block;
+      border-right: 1px dotted $col-blue-1;
+      right: -10px;
+      top: 0;
+      width: 1px;
+      height: 100%;
+      opacity: 0.3;
+    }
+  }
+}

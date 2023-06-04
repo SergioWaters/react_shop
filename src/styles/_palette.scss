@@ -1,0 +1,38 @@
+$col-black-1: #111111;
+$col-blue-1: #3f4e65;
+$col-blue-2: linear-gradient(180deg, #6cd0e9 14.1%, #6cade9 57.69%);
+$col-blue-3: linear-gradient(90deg, #39acfd 0%, #5eb9ff 97.25%);
+$col-yellow-1: #ffc85e;
+$col-yellow-2: #f3a50d;
+$border-blue-dash: 1px dashed rgba(63, 78, 101, 0.3);
+$border-blue-solid: 1px solid rgba(63, 78, 101, 0.3);
+
+@keyframes growDown {
+  0% {
+    transform: scaleY(0);
+  }
+
+  80% {
+    transform: scaleY(1.1);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes shrinkUp {
+  0% {
+    transform: scaleY(1);
+  }
+
+  100% {
+    transform: scaleY(0);
+  }
+}
+
+$transition: 0.5s;
+$shadow: 0px 14px 39px -11px rgba(0, 0, 0, 0.06);
+
+// background: #C4C4C4;
+// box-shadow: 0px 15px 70px -11px rgba(43, 28, 1, 0.04);

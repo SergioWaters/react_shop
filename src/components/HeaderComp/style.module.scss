@@ -1,0 +1,240 @@
+@import "../../styles/palette";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: $col-blue-1;
+
+  & .wrapper {
+    border-top: $border-blue-solid;
+    border-bottom: $border-blue-solid;
+  }
+
+  &__upper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    flex-wrap: wrap;
+
+    & ul {
+      display: flex;
+      gap: 60px;
+      font-size: 12px;
+      line-height: 15px;
+      font-weight: 300;
+      padding: 0;
+
+      & li {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        justify-content: start;
+        position: relative;
+
+        &::after {
+          position: absolute;
+          content: "";
+          right: -30px;
+          top: 0;
+          display: block;
+          width: 1px;
+          height: 100%;
+          border-right: 1px dotted $col-blue-1;
+          opacity: 0.2;
+        }
+
+        &:last-child::after {
+          display: none;
+        }
+      }
+
+      & span {
+        color: $col-black-1;
+        font-weight: 600;
+        flex: 1;
+        font-size: 14px;
+        line-height: 18px;
+      }
+      & a {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    & .nav {
+      & ul {
+        gap: 60px;
+        font-size: 14px;
+        line-height: 21px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  &__lower {
+    display: flex;
+    padding: 24px 0;
+    justify-content: space-between;
+    align-items: center;
+
+    & .lower__part {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &:first-child {
+        gap: 15px;
+      }
+    }
+
+    & .logo {
+      display: block;
+      margin-right: 20px;
+    }
+
+    & .callcenter {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+
+      &__img {
+        height: 92px;
+        width: 70px;
+        border-radius: 0 0 50% 50%;
+        position: relative;
+
+        & img {
+          object-fit: cover;
+          object-position: 0 0;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 27px;
+          right: 4px;
+          width: 8px;
+          height: 8px;
+          background-color: #1fd85d;
+          border: 2px solid #f0f6fa;
+          border-radius: 50%;
+        }
+      }
+
+      & .info {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: flex-end;
+        list-style: none;
+
+        & a {
+          text-decoration: none;
+          color: $col-blue-1;
+        }
+
+        .info__item {
+          font-size: 10px;
+          line-height: 15px;
+          font-weight: 400;
+        }
+
+        .info__item:first-child a {
+          font-size: 14px;
+          line-height: 21px;
+          font-weight: 600;
+          color: $col-black-1;
+        }
+
+        .info__text {
+          font-size: 12px;
+          line-height: 18px;
+          font-weight: 300;
+        }
+      }
+    }
+
+    .divider {
+      position: relative;
+      margin: 0 50px;
+
+      &::after {
+        position: absolute;
+        content: "";
+        right: -25px;
+        top: 0;
+        display: block;
+        width: 1px;
+        height: 100%;
+        border-right: 1px dotted $col-blue-1;
+        opacity: 0.2;
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        left: -25px;
+        top: 0;
+        display: block;
+        width: 1px;
+        height: 100%;
+        border-right: 1px dotted $col-blue-1;
+        opacity: 0.2;
+      }
+    }
+
+    & .cart {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: end;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.5;
+      }
+
+      &_box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+      }
+      &__badge {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: -5%;
+        right: -20%;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background-color: $col-yellow-1;
+        border: 2px solid #fff;
+        color: #fff;
+      }
+
+      &__title {
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 300;
+      }
+
+      &__total {
+        font-size: 14px;
+        line-height: 21px;
+        font-weight: 600;
+        color: $col-black-1;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@import "../../styles/palette";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
