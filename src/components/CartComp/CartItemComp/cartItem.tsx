@@ -109,7 +109,7 @@ export const CartItemComp: FC<props> = ({ sku, toCart }) => {
           </li>
           <li>
             <Button
-              iconUrl="./src/assets/icons/bin.svg"
+              iconUrl="/images/icons/bin.svg"
               onClick={() => quantityChange(CART_DEL)}
             />
           </li>

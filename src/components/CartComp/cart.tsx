@@ -52,9 +52,13 @@ export const CartComp = () => {
     <section className={styles.cart + " container"}>
       <h1>Корзина</h1>
       <div className={styles.cart__inner}>
-        {cartArr.map((c) => (
-          <CartItemComp sku={c} toCart={handleToCart} key={c.art} />
-        ))}
+        {!cartArr.length ? (
+          <h3 className={styles.cart__empty_msg}>Корзина пуста</h3>
+        ) : (
+          cartArr.map((c) => (
+            <CartItemComp sku={c} toCart={handleToCart} key={c.art} />
+          ))
+        )}
       </div>
       <div className={styles.checkout}>
         <Button text="Оформить заказ" onClick={handleCheckout} />
@@ -64,7 +68,7 @@ export const CartComp = () => {
       </div>
       {isModalShown && (
         <ModalComp
-          markup={totalCount ? "Dankeshon" : "Nothing to proceed"}
+          markup={totalCount ? "Заказ оформлен" : "Корзина пуста"}
           onClose={() => setIsModalShown(false)}
         />
       )}

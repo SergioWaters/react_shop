@@ -3,6 +3,17 @@
 .cart {
   padding: 0 0 100px 0;
 
+  &__empty_msg {
+    font-size: 30px;
+    line-height: 39px;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
   &__inner {
     display: flex;
     flex-direction: column;
